@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { sendEmail } from '@/app/api/send/route'
+import { sendEmail } from '@/public/route'
 import Toast from './Toast'
 import submitIcon from '@/public/Assets/SVG/message.svg'
 import Image from 'next/image'
