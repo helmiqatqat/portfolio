@@ -4,7 +4,7 @@ import React, { ReactNode, createContext, useContext, useEffect, useState } from
 type Theme = 'light' | 'dark'
 
 interface IThemeContext {
-  theme: Theme,
+  theme: Theme | undefined,
   toggleTheme: () => void
 }
 
@@ -15,19 +15,25 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>(() => {
+  const [theme, setTheme] = useState<Theme  | undefined>(undefined)
+  
+  useEffect(() => {
+    let localTheme: Theme;
     if (localStorage.getItem('theme')) {
-      return localStorage.getItem('theme') as Theme
+      localTheme = localStorage.getItem('theme') as Theme
+      setTheme(localTheme)
     }
     else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark'
+      localTheme = 'dark'
+      setTheme(localTheme)
     }
-    else return 'light'
-  })
-  useEffect(() => {
+    else {
+      localTheme = 'light'
+      setTheme(localTheme)
+    }
     const htmlElement = document.querySelector('html') as HTMLHtmlElement
-    htmlElement.setAttribute('data-theme', theme)
-  }, [theme])
+    htmlElement.setAttribute('data-theme', localTheme)
+  }, [])
 
   const toggleTheme = () => {
     setTheme(prevTheme => {
