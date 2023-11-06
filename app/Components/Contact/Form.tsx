@@ -54,7 +54,7 @@ export default function Form() {
         </div>
         <div className='flex flex-col gap-2'>
           <label htmlFor='message'>Message</label>
-          <textarea name="msg" required={true} value={formData.msg} onChange={changeHandler} id="message" cols="30" rows="10" placeholder='Write your message here'
+          <textarea name="msg" required={true} value={formData.msg} onChange={changeHandler} id="message" cols={30} rows={10} placeholder='Write your message here'
             className='p-4 rounded-lg bg-gray-50 focus-visible:outline-[1px] focus-visible:outline-sky-600 resize-none'
           />
         </div>
