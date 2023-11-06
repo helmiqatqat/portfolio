@@ -19,7 +19,7 @@ export type TProject = {
 
 export const projects: TProject[] = [
   {
-    title: 'LMS', image: LMS, repo: 'https://github.com/LM-System/frontend',
+    title: 'Learning Management System', image: LMS, repo: 'https://github.com/LM-System/frontend',
     technologies: ['Nextjs', 'Nodejs', 'PostgreSQL']
   },
   {
