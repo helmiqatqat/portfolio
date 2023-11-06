@@ -3,25 +3,83 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --color-bg: '#FFFFFF';
+  --color-cp: '#FFFFFF';
+  --color-h: '#222222';
+  --color-p: '#333333';
+  --color-def: '#222222';
+  --color-wave: 255, 255, 255, 0.25
 }
 
-@media (prefers-color-scheme: dark) {
+@media (data-theme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --color-bg: '#222222';
+    --color-cp: '#333333';
+    --color-h: '#FFFFFF';
+    --color-p: '#999999';
+    --color-def: '#FFFFFFF';
+    --color-wave: 0, 125, 255, 0.25
   }
 }
-
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--color-def);
+  background: var(--color-bg);
+  overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-h)
+}
+p {
+  color: var(--color-p);
+}
+span {
+  color: var(--color-def);
+}
+.grid-parent {
+  @apply grid grid-cols-16 items-center
+}
+.grid-child {
+  @apply grid col-start-2 col-span-14 grid-cols-12 gap-4 grid-rows-2
+}
+.grid-hero {
+  @apply grid grid-cols-16 items-center grid-rows-4 h-hero
+}
+.grid-hero-child {
+  @apply grid grid-cols-12 col-span-14 col-start-2 gap-4 row-span-3
+}
+.header {
+  @apply sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500
+}
+.nav {
+  @apply flex col-span-14 col-start-2 col-end-16 justify-between items-center py-[5px]
+}
+.section {
+  @apply w-full flex flex-col gap-12 col-start-2 col-span-14 py-8 
+}
+.contact-section {
+  @apply w-full flex flex-col gap-12 col-start-2 col-span-14 p-6 md:p-12 
+}
+.section-title {
+  @apply col-span-14 flex justify-center 
+}
+.section-title h2 {
+  @apply relative font-bold before:content-[''] text-4xl md:text-5xl xl:text-6xl
+  before:w-full before:h-2 before:absolute before:-bottom-3 before:left-0 mb-3
+  before:bg-slate-700 before:dark:bg-slate-500 before:rounded-lg
+}
+.section-content {
+  @apply col-span-14
+}
+.contact-bg {
+  background-image: url('/Assets/Images/Contact.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(50px);
 }
