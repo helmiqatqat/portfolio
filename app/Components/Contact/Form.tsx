@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { sendEmail } from '@/public/sendEmail'
+// import { sendEmail } from '@/public/sendEmail'
 import Toast from './Toast'
 import submitIcon from '@/public/Assets/SVG/message.svg'
 import Image from 'next/image'
@@ -22,22 +22,23 @@ export default function Form() {
     const { name, value } = e.target
     setFormData({ ...formData, [name]: value });
   }
-  const submitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    await sendEmail(formData);
-    setFormData({
-      name: '',
-      email: '',
-      msg: ''
-    })
-    setShow(true);
-    setTimeout(() => {
-      setShow(false);
-    }, 3000);
-  }
+  // const submitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault()
+  //   await sendEmail(formData);
+  //   setFormData({
+  //     name: '',
+  //     email: '',
+  //     msg: ''
+  //   })
+  //   setShow(true);
+  //   setTimeout(() => {
+  //     setShow(false);
+  //   }, 3000);
+  // onSubmit={submitHandler}
+  // }
   return (
     <>
-      <form onSubmit={submitHandler} className='w-full md:w-1/2 flex flex-col gap-5 col-span-1 row-span-2 justify-center'>
+      <form className='w-full md:w-1/2 flex flex-col gap-5 col-span-1 row-span-2 justify-center'>
         <div className='flex flex-col gap-2'>
           <label htmlFor='name'>Name</label>
           <input type='text' id='name' name='name' placeholder='John Doe'
