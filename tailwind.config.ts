@@ -26,6 +26,9 @@ const config: Config = {
       gridColumnEnd: {
         '16': '16'
       },
+      backdropBlur: {
+        'normal': '8px'
+      },
       keyframes: {
         upAndDown: {
           '0%': { transform: 'translateY(-5px)', opacity: '100%' },
