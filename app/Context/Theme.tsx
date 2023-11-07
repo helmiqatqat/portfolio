@@ -4,19 +4,19 @@ import React, { ReactNode, createContext, useContext, useEffect, useState } from
 type Theme = 'light' | 'dark'
 
 interface IThemeContext {
-  theme: Theme | undefined,
+  theme: Theme | null,
   toggleTheme: () => void
 }
 
-const ThemeContext = createContext<IThemeContext | undefined>(undefined)
+const ThemeContext = createContext<IThemeContext | null>(null)
 
 interface ThemeProviderProps {
   children: ReactNode
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme  | undefined>(undefined)
-  
+  const [theme, setTheme] = useState<Theme  | null>(null)
+
   useEffect(() => {
     let localTheme: Theme;
     if (localStorage.getItem('theme')) {
