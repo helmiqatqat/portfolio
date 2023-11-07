@@ -6,14 +6,17 @@ import { motion } from "framer-motion";
 import laptop from '@/public/Assets/SVG/laptop.svg'
 import Wave from '@/public/Background/Wave';
 
-const h1 = "Welcome To My Porfolio"
-const p = "I am Helmi Qatqat, Fullstack Web Developer!"
+const h1 = "Welcome To My Porfolio!"
+const p = "I am Helmi Qatqat, Fullstack Web Developer"
 export default function Hero() {
   const [mount, setMount] = useState<boolean>(false)
+
   useEffect(() => {
     setMount(true)
   }, [])
-  if(!mount) return (<>Loading...</>)
+  
+  if(!mount) return null
+  
   return (
     <div className="grid-hero relative" >
       <div className='grid-hero-child w-full h-full items-center'>
