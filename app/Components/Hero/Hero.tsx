@@ -1,20 +1,25 @@
 'use client'
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import laptop from '@/public/Assets/SVG/laptop.svg'
 import Wave from '@/public/Background/Wave';
 
 const h1 = "Welcome To My Porfolio"
 const p = "I am Helmi Qatqat, Fullstack Web Developer!"
 export default function Hero() {
+  const [mount, setMount] = useState<boolean>(false)
+  useEffect(() => {
+    setMount(true)
+  }, [])
+  if(!mount) return (<>Loading...</>)
   return (
     <div className="grid-hero relative" >
       <div className='grid-hero-child w-full h-full items-center'>
         <div className='flex justify-center md:justify-start col-span-12 md:col-span-8'>
           <div className='flex flex-col items-center gap-6 lg:gap-8'>
-            {/* <motion.h1
+            <motion.h1
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
@@ -35,7 +40,7 @@ export default function Hero() {
                   {letter === " " ? "\u00A0" : letter}
                 </motion.span>
               ))}
-            </motion.p> */}
+            </motion.p>
             <Link
               href="/Assets/PDF/HelmiQatqatCV.pdf"
               target="_blank"
