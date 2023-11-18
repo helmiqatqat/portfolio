@@ -13,6 +13,7 @@ const skills: skills = [
   {title: 'tailwind', icon: icons.tailwind},
   {title: 'typescript', icon: icons.typescript},
   {title: 'react', icon: icons.react},
+  {title: 'redux', icon: icons.redux},
   {title: 'nodejs', icon: icons.nodejs},
   {title: 'express', icon: icons.express},
   {title: 'git', icon: icons.git},

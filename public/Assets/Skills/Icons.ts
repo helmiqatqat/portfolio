@@ -1,6 +1,7 @@
 // import html from 
 import next from '../SVG/next.svg'
 import react from '../SVG/react.svg'
+import redux from '../SVG/redux.svg'
 import nodejs from '../SVG/nodejs.svg'
 import express from '../SVG/express.svg'
 import typescript from '../SVG/typescript.svg'
@@ -17,6 +18,7 @@ import tailwind from '../SVG/tailwind.svg'
 const icons = {
   next,
   react,
+  redux,
   nodejs,
   express,
   typescript,
