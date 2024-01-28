@@ -3,6 +3,7 @@ import next from '../SVG/next.svg'
 import react from '../SVG/react.svg'
 import redux from '../SVG/redux.svg'
 import nodejs from '../SVG/nodejs.svg'
+import cypress from '../SVG/cypress.png'
 import express from '../SVG/express.svg'
 import typescript from '../SVG/typescript.svg'
 import javascript from '../SVG/javascript.svg'
@@ -25,12 +26,13 @@ const icons = {
   javascript,
   git,
   github,
-  mongodb,
-  postgresql,
   html,
   css,
-  sass,
   tailwind,
+  sass,
+  cypress,
+  mongodb,
+  postgresql,
 }
 
 export default icons
