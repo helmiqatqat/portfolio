@@ -1,30 +1,27 @@
-import { StaticImport } from 'next/dist/shared/lib/get-img-props'
+import { ISkill } from '@/app/interface'
 import icons from './Icons'
 
-type skill = {
-  title: string,
-  icon: StaticImport
-}
-
-type skills = skill[]
-
-const skills: skills = [
+const skills: ISkill[] = [
   { title: 'next', icon: icons.next },
-  { title: 'tailwind', icon: icons.tailwind },
-  { title: 'typescript', icon: icons.typescript },
   { title: 'react', icon: icons.react },
   { title: 'redux', icon: icons.redux },
+  { title: 'graphql', icon: icons.graphql },
   { title: 'nodejs', icon: icons.nodejs },
+  { title: 'nestjs', icon: icons.nestjs },
   { title: 'express', icon: icons.express },
-  { title: 'git', icon: icons.git },
-  { title: 'github', icon: icons.github },
+  { title: 'postgresql', icon: icons.postgresql },
+  { title: 'mongodb', icon: icons.mongodb },
   { title: 'html', icon: icons.html },
   { title: 'css', icon: icons.css },
   { title: 'javascript', icon: icons.javascript },
+  { title: 'typescript', icon: icons.typescript },
   { title: 'sass', icon: icons.sass },
+  { title: 'tailwind', icon: icons.tailwind },
+  { title: 'jest', icon: icons.jest },
   { title: 'cypress', icon: icons.cypress },
-  { title: 'mongodb', icon: icons.mongodb },
-  { title: 'postgresql', icon: icons.postgresql },
+  { title: 'git', icon: icons.git },
+  { title: 'github', icon: icons.github },
+  { title: 'prisma', icon: icons.primsa },
 ]
 
 export default skills
