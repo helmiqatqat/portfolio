@@ -3,27 +3,15 @@ import Tenzies from '../Images/Tenzies.png'
 import Elzero from '../Images/Elzero.png'
 import Kasper from '../Images/Kasper.png'
 import Leon from '../Images/Leon.png'
-import { StaticImageData } from 'next/image'
+import { IProject } from '@/app/interface'
 
-type Technologies = 'Nextjs' | 'React' | 'Nodejs' | 'Expressjs' | 'TailwindCSS' | 'SASS'
-  | 'Styled-Components' | 'Git' | 'Github' | 'PostgreSQL' | 'MongoDB' | 'HTML' | 'CSS' 
-  | 'TypeScript' | 'JavaScript';
-
-export type TProject = {
-  title: string,
-  image: StaticImageData,
-  repo: string,
-  technologies: Technologies[],
-  liveurl?: string
-}
-
-export const projects: TProject[] = [
+export const projects: IProject[] = [
   {
     title: 'Learning Management System', image: LMS, repo: 'https://github.com/LM-System/frontend',
     technologies: ['Nextjs', 'Nodejs', 'PostgreSQL']
   },
   {
-    title: 'Tenzies', image: Tenzies, repo: 'https://github.com/tenzies/frontend',
+    title: 'Tenzies Game', image: Tenzies, repo: 'https://github.com/tenzies/frontend',
     technologies: ['React', 'SASS', 'Nodejs', 'MongoDB']
   },
   {

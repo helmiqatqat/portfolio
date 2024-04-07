@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="grid-parent bg-neutral text-neutral-content">
       <div className='flex flex-col sm:flex-row items-center justify-between gap-4 py-4 col-start-2 col-span-14'>
-        <p className='text-center'>Copyright © {new Date().getFullYear()} - All right reserved</p>
+        <p className='text-center'>Copyright © {new Date().getFullYear()} - All rights reserved</p>
         <nav className="flex gap-2 sm:gap-4 items-center">
           <Link target='_blank' href={'https://www.linkedin.com/in/helmiqatqat/'}>
             <svg className='w-8 h-8 transition duration-500 fill-[#999] hover:fill-[#0A66C2]' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50">
