@@ -3,7 +3,7 @@ import Tenzies from '../Images/Tenzies.png'
 import Elzero from '../Images/Elzero.png'
 import Kasper from '../Images/Kasper.png'
 import Leon from '../Images/Leon.png'
-import { IProject } from '@/app/interface'
+import { IProject } from '@/app/Datatypes/interfaces'
 
 export const projects: IProject[] = [
   {

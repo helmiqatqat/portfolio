@@ -4,14 +4,11 @@ import { sendEmail } from '@/public/sendEmail'
 import Toast from './Toast'
 import submitIcon from '@/public/Assets/SVG/message.svg'
 import Image from 'next/image'
+import { TFormData } from '@/app/Datatypes/types'
 
-type TFormData = {
-  name: string,
-  email: string,
-  msg: string
-}
 
-export default function Form() {
+
+const Form: React.FC = () => {
   const [show, setShow] = useState<boolean>(false)
   const [formData, setFormData] = useState<TFormData>({
     name: '',
@@ -60,10 +57,12 @@ export default function Form() {
         </div>
         <button type='submit' className='btn w-fit py-3 px-6 self-end bg-sky-700 hover:bg-sky-900 uppercase text-white bold'>
           <span>send</span>
-          <Image src={submitIcon} alt='submit' className={`${show && 'animate-submit'}`}/>
+          <Image src={submitIcon} alt='submit' className={`${show && 'animate-submit'}`} />
         </button>
       </form>
       <Toast show={show} />
     </>
   )
 }
+
+export default Form

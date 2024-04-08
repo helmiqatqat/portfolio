@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import myImg from '@/public/Assets/Images/Helmi.png'
 
-export default function About() {
+const About: React.FC = () => {
   return (
     <div className='grid-parent'>
       <div className='section'>
@@ -23,3 +23,5 @@ export default function About() {
     </div>
   )
 }
+
+export default About

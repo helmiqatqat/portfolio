@@ -1,21 +1,12 @@
 'use client'
-import React, { ReactNode, createContext, useContext, useEffect, useState } from 'react'
-
-type Theme = 'light' | 'dark'
-
-interface IThemeContext {
-  theme: Theme | null,
-  toggleTheme: () => void
-}
+import React, { createContext, useContext, useEffect, useState } from 'react'
+import { Theme } from '../Datatypes/types'
+import { IThemeContext, IThemeProviderProps } from '../Datatypes/interfaces'
 
 const ThemeContext = createContext<IThemeContext | null>(null)
 
-interface ThemeProviderProps {
-  children: ReactNode
-}
-
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme  | null>(null)
+export const ThemeProvider: React.FC<IThemeProviderProps> = ({ children }) => {
+  const [theme, setTheme] = useState<Theme | null>(null)
 
   useEffect(() => {
     let localTheme: Theme;

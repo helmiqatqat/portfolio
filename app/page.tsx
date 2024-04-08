@@ -5,7 +5,7 @@ import Projects from "./Components/Projects/Projects"
 import Contact from './Components/Contact/Contact'
 import Footer from "./Components/Footer/Footer"
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <>
       <Header />
@@ -17,3 +17,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home

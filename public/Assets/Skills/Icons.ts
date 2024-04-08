@@ -1,4 +1,3 @@
-// import html from 
 import next from '../SVG/next.svg'
 import react from '../SVG/react.svg'
 import redux from '../SVG/redux.svg'
@@ -19,28 +18,29 @@ import sass from '../SVG/sass.svg'
 import tailwind from '../SVG/tailwind.svg'
 import nestjs from '../SVG/nestjs.svg'
 import primsa from '../SVG/prisma.svg'
+import { IIcons } from '@/app/Datatypes/interfaces'
 
-const icons = {
+const icons: IIcons = {
   next,
   react,
   redux,
+  graphql,
   nodejs,
+  nestjs,
   express,
-  typescript,
-  javascript,
-  git,
-  github,
+  postgresql,
+  mongodb,
+  primsa,
   html,
   css,
-  tailwind,
+  javascript,
+  typescript,
   sass,
-  cypress,
-  mongodb,
-  postgresql,
+  tailwind,
   jest,
-  graphql,
-  nestjs,
-  primsa,
+  cypress,
+  git,
+  github,
 }
 
 export default icons

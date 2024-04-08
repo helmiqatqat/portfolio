@@ -2,7 +2,7 @@ import React from 'react'
 import { projects } from '@/public/Assets/Projects/Images'
 import Card from './Card'
 
-export default function Projects() {
+const Projects: React.FC = () => {
   return (
     <div className='grid-parent py-[58px] relative overflow-clip' id='projects'>
       <div className='contact-bg w-[200%] h-[200%] absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'></div>
@@ -19,3 +19,5 @@ export default function Projects() {
     </div>
   )
 }
+
+export default Projects

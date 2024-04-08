@@ -1,9 +1,7 @@
 'use client'
 import styled from 'styled-components'
-import Image from 'next/image'
-import envelope from '@/public/Assets/SVG/contact.svg'
 
-export default function Envelope() {
+const Envelope: React.FC = () => {
   return (
     <EnvelopeContainer className='w-full md:w-1/2'>
       <svg id='envalope' className='w-full' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 790 563" fill="none">
@@ -347,3 +345,5 @@ const EnvelopeContainer = styled.div`
 	height: 100vh;
 }
 `
+
+export default Envelope

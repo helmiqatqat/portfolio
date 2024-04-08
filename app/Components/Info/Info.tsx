@@ -2,7 +2,7 @@ import React from 'react'
 import About from './About'
 import Skills from './Skills'
 
-export default function Info() {
+const Info: React.FC = () => {
   return (
     <div className='py-[58px]' id='about'>
       <About />
@@ -10,3 +10,5 @@ export default function Info() {
     </div>
   )
 }
+
+export default Info

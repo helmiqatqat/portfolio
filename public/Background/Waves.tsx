@@ -1,5 +1,5 @@
-export default function Waves() {
-  return(
+const Waves: React.FC = () => {
+  return (
     <div className="waves-container">
       <div className="wave"></div>
       <div className="wave"></div>
@@ -7,3 +7,5 @@ export default function Waves() {
     </div>
   )
 }
+
+export default Waves

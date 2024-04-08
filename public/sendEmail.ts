@@ -1,13 +1,9 @@
 'use server'
-
+import { TFormData } from '@/app/Datatypes/types';
 import { Resend } from 'resend';
 
 const resend = new Resend('re_V3oMznx7_5yczn7H3LcneYGgPNm8Dzv3f');
-type TFormData = {
-  name: string,
-  email: string,
-  msg: string
-}  
+
 export const sendEmail = async (formData: TFormData) => {
   resend.emails.send({
     from: 'onboarding@resend.dev',

@@ -8,7 +8,7 @@ import Wave from '@/public/Background/Wave';
 
 const h1 = "Welcome To My Porfolio!"
 const p = "I am Helmi Qatqat, Fullstack Web Developer"
-export default function Hero() {
+const Hero: React.FC = () => {
   const [mounted, setMounted] = useState<boolean>(false)
 
   useEffect(() => {
@@ -67,3 +67,5 @@ export default function Hero() {
     </div>
   )
 }
+
+export default Hero

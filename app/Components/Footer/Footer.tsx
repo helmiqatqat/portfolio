@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-export default function Footer() {
+const Footer: React.FC = () => {
   return (
     <footer className="grid-parent bg-neutral text-neutral-content">
       <div className='flex flex-col sm:flex-row items-center justify-between gap-4 py-4 col-start-2 col-span-14'>
@@ -27,3 +27,5 @@ export default function Footer() {
     </footer>
   )
 }
+
+export default Footer

@@ -1,10 +1,7 @@
 import React from "react";
+import { IEmailTemplateProps } from "../Datatypes/interfaces";
 
-interface EmailTemplateProps {
-  firstName: string;
-}
-
-export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
+const EmailTemplate: React.FC<Readonly<IEmailTemplateProps>> = ({
   firstName,
 }) => (
   <div>
