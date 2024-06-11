@@ -19,13 +19,12 @@ const About: React.FC = () => {
           </div>
           <p className="py-4 text-center lg:text-start text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl">
             Innovative Full Stack Web Developer capable of designing, building,
-            and optimizing user-centric web applications. A dedicated problem
-            solver, I actively sharpen my algorithm and data structure skills on
-            platforms like LeetCode. Experienced in both frontend and backend
-            development, I am keen to bring design concepts to life and ensure a
-            balanced user experience. Proficient in various programming
-            languages and frameworks, coupled with a passion for implementing
-            best practices in code quality and application architecture.
+            and optimizing user-centric web applications. Proficient in various
+            programming tools and frameworks, with a passion for implementing
+            best practices in code quality and application architecture. A
+            dedicated problem solver, I actively sharpen my algorithm and data
+            structure skills on platforms like LeetCode. Experienced in both
+            frontend and backend development.
           </p>
         </div>
       </div>
