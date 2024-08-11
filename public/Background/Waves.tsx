@@ -5,7 +5,7 @@ const Waves: React.FC = () => {
       <div className="wave"></div>
       <div className="wave"></div>
     </div>
-  )
-}
+  );
+};
 
-export default Waves
+export default Waves;
